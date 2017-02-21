@@ -1,0 +1,23 @@
+	Datenmodell:
+		Todo-Eintrage: TD_TASK
+		+	ID (INT  | not null)
+		+	NAME (VARCHAR(100) | not null)
+		+	Creater/Owner (TD_USER.ID)
+		+	Target Date (DATETIME)
+		+	Note (VARCHAR(255))
+		+	Effort (FLOAT 2,2)
+		
+	TaskListRel
+		+	ID (INT  | not null)
+		+	ENTRY_ID 
+		+	LIST_ID
+		
+	Listen TD_TODOLIST
+		+	ID (INT  | not null)
+		+	USER (TD_USER.ID)
+		+	NAME
+
+	User | TD_USER
+		+	ID (INT  | not null)
+		+	EMAIL (VARCHAR(100) | not null)
+		+	PASSWORD (VARCHAR(50) | not null)
