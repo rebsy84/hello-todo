@@ -2,6 +2,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
+<script type="text/javascript" src="todo.js"></script>
 <title>Create a new ToDo - From</title>
 </head>
 <body>
@@ -16,6 +17,14 @@
 	        <TEXTAREA NAME="description" COLS=40 ROWS=6></TEXTAREA>
 	        <br/>
 	        <input type="submit" value="Submit" />
+	        <input type="button" onclick="sayHello()">
         </form>
+        
+        <main id="data"></main>
+        
+        
+        <table id="todoTable">
+        </table>
+        
 </body>
 </html>
