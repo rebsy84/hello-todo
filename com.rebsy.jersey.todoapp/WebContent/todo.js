@@ -34,7 +34,18 @@ function ajaxInit(){
 }
 
 function getTaskList(){
-	ajaxInit();
-	
-	// tbc
+	ajaxInit();	
+	ajaxRequest.onreadystatechange = processRequest;
+	ajaxRequest.open("GET","http://localhost:8080/com.rebsy.jersey.todoapp/rest/todos",true);
+	ajaxRequest.send(null);
+}
+
+function processRequest(){
+	if(ajaxRequest.readyState == 4){
+		if(ajaxRequest.status == 200){
+			var message = ajaxRequest.responseText;
+			var data = document.getElementById("data");
+			data.innerHTML = message;
+		}
+	}
 }
