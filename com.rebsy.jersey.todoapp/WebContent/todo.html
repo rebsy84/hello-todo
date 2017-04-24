@@ -3,9 +3,40 @@
 <head>
 <meta charset="ISO-8859-1">
 <script type="text/javascript" src="todo.js"></script>
-<title>Create a new ToDo - From</title>
+<title>Test Rest-API</title>
 </head>
 <body>
+
+<h1>Rest-API Test</h1>
+
+<h2>get all Lists</h2>
+	
+	<div>
+	
+	</div>
+	
+<h2>get all tasks of List(id)</h2>
+
+	<div>
+		<label for="listID">List ID</label>
+		<input type ="text" name="listID">
+		<input type="button" value="get all Tasks" onclick="getAllTasksOfList(allTasksOfList)">
+	</div>
+
+	<div id="allTasksOfList"></div>
+
+<h2>get details of task(id)</h2>
+
+	<div>
+		<label for="taskID" >Task ID</label>
+		<input type="text" name="taskID">
+		<input type="button" value="get details of task (id)" onclick="">
+	</div>
+	
+<h2>create a new list</h2>
+
+<h2>create a new task</h2>
+
         <form action="http://localhost:8080/com.rebsy.jersey.todoapp/rest/todos" method="POST">
 	        <label for="id">ID</label> 
 	        <input name="id" />
@@ -19,7 +50,7 @@
 	        <input type="submit" value="Submit" />
         </form>
         
-        <input type="button" value="get all" onclick="getTaskList()">
+
         
         <main id="data"></main>
         
